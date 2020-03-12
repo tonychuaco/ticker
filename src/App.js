@@ -38,6 +38,7 @@ class Ticker extends Component {
     return (
       <div>
         <div>The ticker is: {this.state.count}</div>
+        <button type="button" onClick={this.reset}>Pause the Ticker</button>
         <button type="button" onClick={this.reset}>Reset Ticker</button>
       </div>
     );
