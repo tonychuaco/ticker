@@ -1,19 +1,18 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
 class Ticker extends Component {
-
-  constructor () {
+  constructor() {
     super();
     this.state = {
       count: 0,
-    }
+    };
   }
 
   componentDidMount() {
     setInterval(() => {
       this.setState({
-        count: this.state.count + 1
-      })
+        count: this.state.count + 1,
+      });
     }, 1000);
   }
 
@@ -25,8 +24,8 @@ class Ticker extends Component {
   reset = () => {
     this.setState({
       count: 0,
-    })
-  }
+    });
+  };
 
   // componentWillUnmount(){
   //   this.setState({
@@ -34,15 +33,19 @@ class Ticker extends Component {
   //   })
   // }
 
-  render () {
+  render() {
     return (
       <div>
         <div>The ticker is: {this.state.count}</div>
-        <button type="button" onClick={this.reset}>Pause the Ticker</button>
-        <button type="button" onClick={this.reset}>Reset Ticker</button>
+        <button type="button" onClick={this.reset}>
+          Pause the Ticker
+        </button>
+        <button type="button" onClick={this.reset}>
+          Reset Ticker
+        </button>
       </div>
     );
-  };
-};
+  }
+}
 
 export default Ticker;
